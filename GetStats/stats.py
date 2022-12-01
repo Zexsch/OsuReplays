@@ -1,6 +1,5 @@
-class Stats:
+class BeatmapStats:
     def __init__(self, data: dict[str:str]) -> None:
-        #  Map stats
         self.new_data: dict[str, str | float] = {
             'circle_size': float(data['diff_size']),
             'overall_difficulty' :float(data['diff_overall']),
@@ -15,6 +14,22 @@ class Stats:
         }
     
     def return_data(self) -> dict[str:str|float]:
+        return self.new_data
+    
+    def __repr__(self) -> str:
+        return str(self.new_data)
+
+
+class PlayerStats:
+    def __init__(self, data: dict[str:str | float]) -> None:
+        self.new_data: dict[str, str | float] = {
+            'user_id': int(data['user_id']),
+            'username': data['username'],
+            'total_pp': data['pp_raw'],
+            'rank': data['pp_rank']
+        }
+        
+    def return_data(self) -> dict[str:str]:
         return self.new_data
     
     def __repr__(self) -> str:
