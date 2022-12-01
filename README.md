@@ -14,7 +14,9 @@ If that doesn't work try `python3 -m pip install -r requirements.txt` <br />
 
 ##  Usage
 
+Remove all .txt files in /ImageOutput, /MovedReplays, /Replays <br />
 Put all replays in /Replays (.osr files) <br />
-Run main.py via terminal `python main.py` <br >
+Run main.py via terminal `python main.py` <br />
 
-Images will be put under /ImageOutput
+Images will be put under /ImageOutput <br />
+Replays will be moved to /MovedReplays
