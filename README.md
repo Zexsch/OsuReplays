@@ -14,6 +14,7 @@ If that doesn't work try `python3 -m pip install -r requirements.txt` <br />
 
 ##  Usage
 
+Run main.py to setup all folders. <br />
 Put all replays in /Replays (.osr files) <br />
 Run main.py <br />
 
