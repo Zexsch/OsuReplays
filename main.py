@@ -8,9 +8,16 @@ from GetStats.request_info import fetch_beatmap_info
 from GetStats.stats import BeatmapStats
 from Image.get_image import ImageFetcher
 from Image.edit_beatmap_images import draw_stats
-from GetStats.beatmap import BeatmapFetcher
+from Config.create_dirs import create_image_dirs
+from Config.create_dirs import create_replay_dirs
+from Config.threads import start_thread
 
 def main() -> None:
+    print('Started Operation.')
+    start_thread()
+    create_image_dirs()
+    create_replay_dirs()
+    
     info = fetch_beatmap_info()
     data: list[bytes] = info[0]
     player_names: list[str] = info[1]
@@ -35,7 +42,7 @@ def main() -> None:
     player_files: list[str] = [f for f in listdir(path=str(PATH / 'Image' / 'PlayerImages'))]
     for i in player_files:
         remove(str(PATH / 'Image' / 'PlayerImages' / i))
-            
+        
     print('Finished Operation.')
     
 
