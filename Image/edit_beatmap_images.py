@@ -36,13 +36,17 @@ def draw_stats(stats: dict[str,str|float], player_name: str) -> None:
     # Map
     title_string = f'{stats["artist"]} - {stats["name"]}'
     if len(title_string) > 45:
-        if len(stats["artist"]) > 30:
+        if len(stats["artist"]) > 30 and len(stats["artist"]) <50:
             text_draw(draw, 10, 10, str(stats["artist"]), medium_font)  # Artist
+        elif len(stats["artist"]) >=50:
+            text_draw(draw, 10, 60, f'{str(stats["artist"])[:47]}...', medium_font)  # Artist
         else:
             text_draw(draw, 10, 10, str(stats["artist"]), big_font)  # Artist
         
-        if len(stats["name"]) > 45:
+        if len(stats["name"]) > 45 and len(stats["name"]) < 60:
             text_draw(draw, 10, 60, str(stats["name"]), medium_font)  # Title
+        elif len(stats["name"]) >= 60:
+            text_draw(draw, 10, 60, f'{str(stats["name"])[:57]}...', medium_font)  # Title
         else:
             text_draw(draw, 10, 60, str(stats["name"]), big_font)  # Title
         
