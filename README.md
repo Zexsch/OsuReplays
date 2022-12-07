@@ -4,7 +4,7 @@
 ## **Change the API key in Config/config.py**
 
 Go to https://osu.ppy.sh/p/api and get your API access key. Do NOT share this with anyone. <br />
-Replace 'REPLACETHIS' in ACCESS_KEY with the API key (in strings).
+Replace 'REPLACE THIS' in Config/config.py ACCESS_KEY with the API key (in apostrophes). <br />
 
 ##  Install dependencies
 
